@@ -64,7 +64,7 @@ export default class WelcomeScreen extends Component{
 userLogin = (emailId, password)=>{
    firebase.auth().signInWithEmailAndPassword(emailId, password)
    .then(()=>{
-      this.props.navigation.navigate("HomeScreen")
+     this.props.navigation.navigate('BookDonate')
    })
    .catch((error)=> {
      var errorCode = error.code;
@@ -190,7 +190,7 @@ showModal = ()=>{
           }
         <View style={{justifyContent:'center', alignItems:'center'}}>
         
-          <Text style={styles.title}>Barter System</Text>
+          <Text style={styles.title}>Book Santa</Text>
         </View>
         <View>
             <TextInput
